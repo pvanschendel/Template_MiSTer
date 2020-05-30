@@ -1017,6 +1017,7 @@ assign HDMI_TX_HS = hdmi_out_hs;
 assign HDMI_TX_VS = hdmi_out_vs;
 assign HDMI_TX_DE = hdmi_out_de;
 assign HDMI_TX_D  = hdmi_out_d;
+assign HDMI_MCLK = 0;
 
 /////////////////////////  VGA output  //////////////////////////////////
 
@@ -1119,8 +1120,6 @@ assign SDCD_SPDIF =(SW[3] & ~spdif) ? 1'b0 : 1'bZ;
 	assign AUDIO_R     = SW[3] ? 1'bZ : SW[0] ? HDMI_I2S   : anr;
 	assign AUDIO_L     = SW[3] ? 1'bZ : SW[0] ? HDMI_SCLK  : anl;
 `endif
-
-assign HDMI_MCLK = 0;
 
 wire [15:0] audio_l, audio_l_pre;
 aud_mix_top audmix_l
