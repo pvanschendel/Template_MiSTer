@@ -171,6 +171,8 @@ set_instance_assignment -name HPS_LOCATION HPSINTERFACEPERIPHERALUART_X52_Y67_N1
 #============================================================
 
 set_global_assignment -name PRE_FLOW_SCRIPT_FILE "quartus_sh:sys/build_id.tcl"
-set_global_assignment -name CDF_FILE jtag.cdf
-set_global_assignment -name QIP_FILE sys/sys.qip
+set_global_assignment -name CDF_FILE             jtag.cdf
+set_global_assignment -name VERILOG_FILE         sys/sys_top.v
+set_global_assignment -name SDC_FILE             sys/sys_top.sdc
+set_global_assignment -name QIP_FILE             sys/sys.qip
 
